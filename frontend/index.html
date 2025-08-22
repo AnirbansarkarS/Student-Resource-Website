@@ -4,12 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/frontend/styles/style.css">
 </head>
 <body>
-    <h1>WEB</h1>
-    <h1>OK</h1>
-    <h1>hello world</h1>
-    <h3>My name is Arpan</h3>
-    
+  <!-- This is hero section part --arpan atha -->
+<section class="hero">
+     <div class="hero-image">
+    <img src="stu.png" alt="Education AI">
+  </div>
+  <div class="hero-text">
+    <!-- Static h1 with animated span -->
+     <h1>Hello <a style="color:#2963d6;">Everyone</a></h1>
+    <h1><span id="edu-type"></span></h1>
+    <p>
+      Unlock your potential with our AI-powered educational platform. Learn new skills, 
+      track your progress, and explore knowledge designed to guide your success 24/7.
+    </p>
+    <button onclick="alert('Redirecting to Courses...')">Start Learning</button>
+  </div>
+ 
+</section>
+
+<!-- Typed.js Animation -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+var typed = new Typed('#edu-type', {
+  strings: [
+    "<span style='color:#4a6cf7'>Learn Smarter</span> with <span style='color:#00c6ff'>AI</span>",
+    "<span style='color:#ff6b6b'>Empowering</span> Education for <span style='color:#28a745'>All</span>",
+    "Your <span style='color:#ff7eb3'>Journey</span> to <span style='color:#f39c12'>Success</span> Starts Here"
+  ],
+  typeSpeed: 50,
+  backSpeed: 30,
+  loop: true
+});
+
+</script>
 </body>
 </html>
