@@ -418,6 +418,13 @@ p.phone {
   margin-top: 20px;
   font-size: 14px;
 }
+.anim{
+  margin-left: 200px;
+  height: 500px;
+}
+.top{
+  display: flex;
+}
 
 /* 📱 Responsive Design */
 @media (max-width: 700px) {
