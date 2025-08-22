@@ -1,52 +1,21 @@
-from flask import Flask, render_template, request, redirect, url_for
-import mysql.connector
+from flask import Flask
+from flask_cors import CORS
+from routes.syllabus import syllabus_bp
+from routes.notes import notes_bp
+from routes.questions import questions_bp
 
 app = Flask(__name__)
+CORS(app)  # Allow frontend requests (HTML/JS)
 
-# Connect to MySQL database
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",          # your MySQL username
-    password="password",  # your MySQL password
-    database="college_db" # your database name
-)
-cursor = db.cursor()
+# Register Blueprints (modular routes)
+# All Make routes Then I have to change the URL prefix....idont know for now
+app.register_blueprint(syllabus_bp, url_prefix="/api/bba")
+app.register_blueprint(notes_bp, url_prefix="/api/notes")
+app.register_blueprint(questions_bp, url_prefix="/api/questions")
 
-# Home route
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')   # frontend HTML
+    return {"message": "Welcome to College Edu Portal API"}
 
-# Example route for syllabus page
-@app.route('/syllabus')
-def syllabus():
-    return render_template('syllabus.html')
-
-# Example route for notes page
-@app.route('/notes')
-def notes():
-    return render_template('notes.html')
-
-# Example route for PYQ page
-@app.route('/pyq')
-def pyq():
-    return render_template('pyq.html')
-
-# Example: Saving feedback form data into MySQL
-@app.route('/feedback', methods=['GET', 'POST'])
-def feedback():
-    if request.method == 'POST':
-        name = request.form['name']
-        message = request.form['message']
-
-        query = "INSERT INTO feedback (name, message) VALUES (%s, %s)"
-        values = (name, message)
-        cursor.execute(query, values)
-        db.commit()
-
-        return redirect(url_for('home'))
-    
-    return render_template('feedback.html')
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(debug=True)

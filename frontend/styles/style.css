@@ -1,12 +1,10 @@
-
-<!--footer>
+/* 🌟 Footer Styles */
 footer {
-  background: linear-gradient(to right,rgb(30, 10, 10), #150101);
+  background: linear-gradient(to right, rgb(30, 10, 10), #150101);
   border-top-left-radius: 100px;
   width: 100%;
   position: relative;
   color: white;
-
 }
 
 .container {
@@ -119,7 +117,6 @@ p.phone {
   transition: all 0.3s ease;
 }
 
-/* 🌟 Social media brand glow */
 .footer-col .social-icons i:hover {
   transform: scale(1.15);
   color: white;
@@ -156,4 +153,73 @@ p.phone {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 20px;
   font-size: 14px;
+}
+
+/* 🚀 Hero Section Styles */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f0f4ff, #e3e9ff);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  background: #2963d6;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  background: #2963d6;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(47, 75, 215, 0.4);
+}
+
+.hero-image img {
+  width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .hero-image img {
+    width: 90%;
+  }
 }
