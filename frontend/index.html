@@ -12,8 +12,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
 <body>
 
   <!-- Page 1 -->
@@ -27,41 +29,54 @@
         <h4><a href="#">SIGNUP</a></h4>
       </div>
     </div>
-
+    
     <!-- Text Section -->
     <section id="text">
       <h1>Welcome to Resource Page</h1>
       <p>Your one-stop destination for notes, books, and guides.</p>
     </section>
+    <!-- <iframe src='https://my.spline.design/robotfollowcursorforlandingpage-xMyYqbeUMvoEtzJpA1JVKlJA/' frameborder='0' width='150%' height='800vh'></iframe> -->
 
-    <!-- Resource Cards -->
-    <section id="resources">
-      <h2 class="title">EXPLORE RESOURCES</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <h3>Syllabus</h3>
-            <p>Download updated course syllabus.</p>
-          </div>
-          <div class="swiper-slide">
-            <h3>Notes</h3>
-            <p>Access class notes and guides.</p>
-          </div>
-          <div class="swiper-slide">
-            <h3>Questions</h3>
-            <p>Practice previous year questions.</p>
-          </div>
-          <div class="swiper-slide">
-            <h3>Playlists</h3>
-            <p>Curated video playlists for study.</p>
-          </div>
-        </div>
-        <!-- Swiper Controls -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+
+    <!-- cards -->
+   <section id="resources">
+  <h2 class="title">EXPLORE COURSES</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <h3>B.Tech</h3>
+        <p>Engineering syllabus, notes & previous papers.</p>
+        <button class="btn-water">Click Here</button>
       </div>
-    </section>
+
+      <div class="swiper-slide">
+        <h3>BCA</h3>
+        <p>Computer applications syllabus & study material.</p>
+      <button class="btn-water">Click Here</button>
+      </div>
+
+      <div class="swiper-slide">
+        <h3>BBA</h3>
+        <p>Business administration resources & guides.</p>
+  <button class="btn-water">Click Here</button>
+      </div>
+
+      <div class="swiper-slide">
+        <h3>BHM</h3>
+        <p>Hospitality & hotel management study resources.</p>
+      <button class="btn-water">Click Here</button>
+      </div>
+
+    </div>
+
+    <!-- Swiper Controls -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
   </div>
 
   <!-- Hero Section -->
@@ -167,6 +182,8 @@
       loop: true
     });
   </script>
+
+
 
 </body>
 </html>
