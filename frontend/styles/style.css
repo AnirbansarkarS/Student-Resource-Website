@@ -1,4 +1,161 @@
-/* this is hero section css--Arpan atha */
+/* 🌟 Footer Styles */
+footer {
+  background: linear-gradient(to right, rgb(30, 10, 10), #150101);
+  border-top-left-radius: 100px;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 7%;
+  flex-wrap: wrap;
+}
+
+.footer-col {
+  width: 25%;
+  min-width: 220px;
+}
+
+.footer-col h2,
+.footer-col h3 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+p.email {
+  margin: 30px 0;
+}
+
+p.phone {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer-col .text-office {
+  margin-bottom: 20px;
+}
+
+.underline {
+  width: 70px;
+  height: 3px;
+  position: relative;
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.underline span {
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  left: 10px;
+  background-color: rgb(63, 63, 63);
+  border-radius: 3px;
+  animation: moving 1.5s linear infinite;
+}
+
+@keyframes moving {
+  0% { left: -20px; }
+  100% { left: 100%; }
+}
+
+.footer-col ul {
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffcc00;
+}
+
+.footer-col form {
+  margin-top: 20px;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-col form input {
+  width: 70%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  color: white;
+}
+
+.footer-col form i {
+  font-size: 15px;
+}
+
+.footer-col .social-icons {
+  margin-top: 20px;
+}
+
+.footer-col .social-icons i {
+  padding: 10px;
+  background-color: white;
+  color: #00093c;
+  border-radius: 50%;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.footer-col .social-icons i:hover {
+  transform: scale(1.15);
+  color: white;
+}
+
+.footer-col .social-icons .fa-facebook-f:hover {
+  background-color: #1877f2;
+  box-shadow: 0 0 15px #1877f2;
+}
+
+.footer-col .social-icons .fa-instagram:hover {
+  background-color: #e1306c;
+  box-shadow: 0 0 15px #e1306c;
+}
+
+.footer-col .social-icons .fa-youtube:hover {
+  background-color: #ff0000;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+.footer-col .social-icons .fa-linkedin-in:hover {
+  background-color: #0a66c2;
+  box-shadow: 0 0 15px #0a66c2;
+}
+
+.footer-para {
+  max-width: 250px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* 🚀 Hero Section Styles */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -52,8 +209,7 @@
   box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
-
-/* Responsive */
+/* 📱 Responsive Design */
 @media (max-width: 700px) {
   .hero {
     flex-direction: column;
@@ -67,4 +223,3 @@
     width: 90%;
   }
 }
-
