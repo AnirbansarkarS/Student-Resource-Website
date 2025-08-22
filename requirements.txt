@@ -1,0 +1,4 @@
+Flask
+Flask-Cors
+mysql-connector-python
+SQLAlchemy

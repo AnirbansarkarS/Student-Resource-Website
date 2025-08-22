@@ -1,76 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Page</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Your Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
 </head>
-<body> 
-  
-    <div class="main">
-            <!-- Page 1 -->
-    <div id="page1">
-      <div id="NAV"> 
-        <img src="" alt="">
-       <div id="nav-part2">
-  <h4><a href="#">LOGIN</a></h4>
-  <h4><a href="#">SIGNUP</a></h4>
-</div>
+<body>
 
-  
-        </div>
-        <!-- the text is here -->
-      <section id="text">
-        <h1>Welcome to Resource Page</h1>
-        <p>Your one-stop destination for notes, books, and guides.</p>
+  <!-- Page 1 -->
+  <div id="page1">
+    <!-- Navbar -->
+    <div id="NAV">
+      <!-- Optional Logo -->
+      <!-- <img src="logo.png" alt="Logo"> -->
+      <div id="nav-part2">
+        <h4><a href="#">LOGIN</a></h4>
+        <h4><a href="#">SIGNUP</a></h4>
+      </div>
+    </div>
+
+    <!-- Text Section -->
+    <section id="text">
+      <h1>Welcome to Resource Page</h1>
+      <p>Your one-stop destination for notes, books, and guides.</p>
     </section>
-       <!-- cards -->
-<section id="resources">
-  <h2 class="title">EXPLORE RESOURCES</h2>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
 
-      <div class="swiper-slide">
-        <h3>Syllabus</h3>
-        <p>Download updated course syllabus.</p>
+    <!-- Resource Cards -->
+    <section id="resources">
+      <h2 class="title">EXPLORE RESOURCES</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h3>Syllabus</h3>
+            <p>Download updated course syllabus.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>Notes</h3>
+            <p>Access class notes and guides.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>Questions</h3>
+            <p>Practice previous year questions.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>Playlists</h3>
+            <p>Curated video playlists for study.</p>
+          </div>
+        </div>
+        <!-- Swiper Controls -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-
-      <div class="swiper-slide">
-        <h3>Notes</h3>
-        <p>Access class notes and guides.</p>
-      </div>
-
-      <div class="swiper-slide">
-        <h3>Questions</h3>
-        <p>Practice previous year questions.</p>
-      </div>
-
-      <div class="swiper-slide">
-        <h3>Playlists</h3>
-        <p>Curated video playlists for study.</p>
-      </div>
-
-    </div>
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Navigation Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    </section>
   </div>
-</section>
 
-
-
-    
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="stu.png" alt="Education AI">
     </div>
+    <div class="hero-text">
+      <h1>Hello <a style="color:#2963d6;">Everyone</a></h1>
+      <h1><span id="edu-type"></span></h1>
+      <p>
+        Unlock your potential with our AI-powered educational platform. Learn new skills,
+        track your progress, and explore knowledge designed to guide your success 24/7.
+      </p>
+      <button onclick="alert('Redirecting to Courses...')">Start Learning</button>
     </div>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/script.js"></script>    
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Typed.js Animation -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#edu-type', {
+      strings: [
+        "<span style='color:#4a6cf7'>Learn Smarter</span> with <span style='color:#00c6ff'>AI</span>",
+        "<span style='color:#ff6b6b'>Empowering</span> Education for <span style='color:#28a745'>All</span>",
+        "Your <span style='color:#ff7eb3'>Journey</span> to <span style='color:#f39c12'>Success</span> Starts Here"
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+
 </body>
-
-
 </html>
