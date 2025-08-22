@@ -5,13 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Resource Website</title>
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles/style.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- Page 1 -->
+  <div id="page1">
+    <!-- Navbar -->
+    <div id="NAV">
+      <!-- Optional Logo -->
+      <!-- <img src="logo.png" alt="Logo"> -->
+      <div id="nav-part2">
+        <h4><a href="#">LOGIN</a></h4>
+        <h4><a href="#">SIGNUP</a></h4>
+      </div>
+    </div>
+
+    <!-- Text Section -->
+    <section id="text">
+      <h1>Welcome to Resource Page</h1>
+      <p>Your one-stop destination for notes, books, and guides.</p>
+    </section>
+
+    <!-- Resource Cards -->
+    <section id="resources">
+      <h2 class="title">EXPLORE RESOURCES</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h3>Syllabus</h3>
+            <p>Download updated course syllabus.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>Notes</h3>
+            <p>Access class notes and guides.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>Questions</h3>
+            <p>Practice previous year questions.</p>
+          </div>
+          <div class="swiper-slide">
+            <h3>Playlists</h3>
+            <p>Curated video playlists for study.</p>
+          </div>
+        </div>
+        <!-- Swiper Controls -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -97,6 +148,10 @@
       © 2025 Student Resource Website | All Rights Reserved
     </div>
   </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
 
   <!-- Typed.js Animation -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
