@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Cards Animation</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Page background gradient */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px;
+      background: linear-gradient(135deg, #667eea, #764ba2, #f7971e);
+      background-size: 300% 300%;
+      animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Card design */
+    .card {
+      width: 220px;
+      height: 160px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(100px);
+      cursor: pointer;
+      border: 3px solid transparent;
+      background-clip: padding-box;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Border gradient glow */
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 3px;
+      border-radius: 18px;
+      background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+    }
+
+    /* Card content */
+    .card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      font-weight: normal;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card"><i class="fas fa-laptop-code"></i>CSE <div class="subtitle">Computer Science</div></div>
+  <div class="card"><i class="fas fa-database"></i>IT <div class="subtitle">Information Tech</div></div>
+  <div class="card"><i class="fas fa-robot"></i>AIML <div class="subtitle">AI & Machine Learning</div></div>
+  <div class="card"><i class="fas fa-project-diagram"></i>CSBS <div class="subtitle">Business Systems</div></div>
+  <div class="card"><i class="fas fa-code-branch"></i>CSDS <div class="subtitle">Data Science</div></div>
+  <div class="card"><i class="fas fa-network-wired"></i>CSCS <div class="subtitle">Cyber Security</div></div>
+  <div class="card"><i class="fas fa-microchip"></i>ECE <div class="subtitle">Electronics</div></div>
+  <div class="card"><i class="fas fa-bolt"></i>EE <div class="subtitle">Electrical</div></div>
+
+  <script>
+    // Intro animation
+    gsap.to(".card", {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.3,
+      ease: "bounce.out"
+    });
+
+    // Card color animation effect
+    document.querySelectorAll(".card").forEach((card, i) => {
+      gsap.to(card, {
+        backgroundColor: ["#ffffff", "#ffeaa7", "#a29bfe", "#fab1a0", "#55efc4"],
+        repeat: -1,
+        yoyo: true,
+        duration: 4,
+        delay: i * 0.5
+      });
+
+      // Hover effect
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, { scale: 1.1, duration: 0.3 });
+      });
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, { scale: 1, duration: 0.3 });
+      });
+    });
+  </script>
+</body>
+</html>
