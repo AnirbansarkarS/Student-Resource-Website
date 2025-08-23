@@ -1,6 +1,15 @@
 CREATE DATABASE IF NOT EXISTS college_portal;
 USE college_portal;
 
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    course VARCHAR(100),
+    year INT
+);
+
 CREATE TABLE syllabus (
     id INT AUTO_INCREMENT PRIMARY KEY,
     course VARCHAR(100),
