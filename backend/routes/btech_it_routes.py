@@ -1,13 +1,13 @@
 from flask import Blueprint, jsonify
 from backend.models import Resource, Course
 
-bp = Blueprint('bca', __name__, url_prefix='/bca')
+bp = Blueprint('btech1', __name__, url_prefix='/btech1')
 
 # Get all resources for B.Tech Year 1
 @bp.route('/resources', methods=['GET'])
 def get_btech1_resources():
-    # Assuming Year 1 B.Tech courses
-    courses = Course.query.filter_by(name='BCA', year=1).all()
+    # Assuming IT B.Tech courses
+    courses = Course.query.filter_by(name='B.Tech', year=1).all()
     all_resources = []
     for course in courses:
         resources = Resource.query.filter_by(course_id=course.id).all()
