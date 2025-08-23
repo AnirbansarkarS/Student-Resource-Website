@@ -21,7 +21,11 @@
       background-size: 300% 300%;
       animation: gradientShift 10s ease infinite;
     }
-
+    /* anchor tag */
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -80,8 +84,8 @@
 </head>
 <body>
 
-  <div class="card"><i class="fas fa-laptop-code"></i>CSE <div class="subtitle">Computer Science</div></div>
-  <div class="card"><i class="fas fa-database"></i>IT <div class="subtitle">Information Tech</div></div>
+  <a href="/Student-Resource-Website/frontend/B-Tech/btechCSE.html" class="card-link"><div class="card"><i class="fas fa-laptop-code"></i>CSE<div class="subtitle">Computer Science</div></div></a>
+  <a href="/Student-Resource-Website/frontend/B-Tech/btechIT.html" class="card-link"><div class="card"><i class="fas fa-laptop-code"></i>IT<div class="subtitle">Information Technology</div></div></a>
   <div class="card"><i class="fas fa-robot"></i>AIML <div class="subtitle">AI & Machine Learning</div></div>
   <div class="card"><i class="fas fa-project-diagram"></i>CSBS <div class="subtitle">Business Systems</div></div>
   <div class="card"><i class="fas fa-code-branch"></i>CSDS <div class="subtitle">Data Science</div></div>

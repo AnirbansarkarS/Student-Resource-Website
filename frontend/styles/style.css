@@ -47,7 +47,10 @@ html, body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1000;
 }
-
+ /* anchor tag  */
+ a{
+  text-decoration: none;
+  color:inherit ;}
 #nav-part2 {
   margin-left: 85%;
   display: flex;

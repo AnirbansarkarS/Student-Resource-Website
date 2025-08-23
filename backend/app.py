@@ -13,12 +13,12 @@ def home():
 # Serve login page
 @app.route('/login')
 def login_page():
-    return send_from_directory('../frontend', 'login.html')
+    return send_from_directory('../frontend', 'user.html')
 
 # Serve other course pages
 @app.route('/btech')
 def btech_page():
-    return send_from_directory('../frontend', 'btech.html')
+    return send_from_directory('../frontend', 'btechit.html')
 
 @app.route('/bba')
 def bba_page():
