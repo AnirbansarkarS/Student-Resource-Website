@@ -488,5 +488,65 @@
       });
     });
   </script>
+
+   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script>
+  // Animate cards in
+
+
+
+// Animate cards - smooth rise + pop effect
+function animateCards(sectionId) {
+  const cards = document.querySelectorAll(`#${sectionId} .card`);
+  gsap.fromTo(cards,
+    {
+      opacity: 0,
+      y: 120,
+      scale: 0.95,
+      visibility: "hidden"
+    },
+    {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      visibility: "visible",
+      duration: 1,
+      stagger: {
+        each: 0.15,
+        from: "start",
+        ease: "power2.out"
+      },
+      ease: "back.out(1.7)" // springy finish
+    }
+  );
+}
+
+// Initial load animation
+animateCards("semester1");
+
+// Tab functionality with gsap swap
+document.querySelectorAll('.semester-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.semester-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    // Hide all sections
+    document.querySelectorAll('.semester-section').forEach(section => {
+      section.classList.add('hidden');
+    });
+
+    // Show target section
+    const targetId = tab.getAttribute('data-target');
+    document.getElementById(targetId).classList.remove('hidden');
+
+    // Animate new section cards
+    animateCards(targetId);
+  });
+});
+
+
+</script>
 </body>
 </html>
