@@ -578,3 +578,18 @@ p.phone {
   }
 }
 
+/* Spline Animation Container */
+.spline-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio, adjust as needed */
+}
+
+.spline-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
