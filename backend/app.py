@@ -1,21 +1,31 @@
 from flask import Flask
-from flask_cors import CORS
-from routes.syllabus import syllabus_bp
-from routes.notes import notes_bp
-from routes.questions import questions_bp
+from backend.models import db
+from backend.routes import bba_routes, bca_routes, btech1_routes, user_routes
 
 app = Flask(__name__)
-CORS(app)  # Allow frontend requests (HTML/JS)
 
-# Register Blueprints (modular routes)
-# All Make routes Then I have to change the URL prefix....idont know for now
-app.register_blueprint(syllabus_bp, url_prefix="/api/bba")
-app.register_blueprint(notes_bp, url_prefix="/api/notes")
-app.register_blueprint(questions_bp, url_prefix="/api/questions")
+# Database configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../database/student_resource.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = "supersecretkey"  # For session management
 
-@app.route("/")
+# Initialize DB
+db.init_app(app)
+
+# Create tables if they don't exist
+with app.app_context():
+    db.create_all()
+
+# Register Blueprints
+app.register_blueprint(user_routes.bp)   # /user
+app.register_blueprint(bba_routes.bp)    # /bba
+app.register_blueprint(bca_routes.bp)    # /bca
+app.register_blueprint(btech1_routes.bp) # /btech1
+
+# Root route
+@app.route('/')
 def home():
-    return {"message": "Welcome to College Edu Portal API"}
+    return "Welcome to Student Resource Website!"
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)

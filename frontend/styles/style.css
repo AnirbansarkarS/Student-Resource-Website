@@ -1,4 +1,268 @@
-/* 🌟 Footer Styles */
+/* 🎯 Reset and Base Styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gilroy', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* 🔷 Main Container */
+#main {
+  z-index: 10;
+  position: relative;
+}
+
+/* 📘 Page 1 Styling */
+#page1 {
+  min-height: 105vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #1e3a8a, #3b82f6, #f9fafb);
+  /* dark blue → bright blue → white */
+  
+  color: white;
+  position: relative;
+  padding: 1vh 2vw;
+}
+
+/* 🧭 Navbar */
+#NAV {
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1000;
+}
+
+#nav-part2 {
+  margin-left: 85%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+#nav-part2 h4 {
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  padding: 9px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #3c71d9;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#nav-part2 h4::after {
+  display: none;
+}
+
+#nav-part2 h4 a {
+  text-decoration: none;
+  z-index: 9;
+  position: relative;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#nav-part2 h4:hover {
+  background-color: white;
+  border: 1px solid #3c71d9;
+}
+
+#nav-part2 h4:hover a {
+  color: #2963d6;
+}
+
+/* 📝 Text Section */
+#text {
+  max-width: 600px;
+  margin: 150px 0 50px 70px;
+  padding: 10px;
+  color: white;
+  text-align: left;
+}
+
+#text h1 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+#text p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* 📚 Swiper Container */
+.mySwiper {
+  width: 90%;
+  height: 250px;
+  margin: 40px auto;
+}
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Animated heading */
+.swiper-slide h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #2563eb;
+  animation: fadeInUp 0.8s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect on course title */
+.swiper-slide h3:hover {
+  transform: scale(1.1);
+  color: #1d4ed8;
+  text-shadow: 0px 0px 8px rgba(37, 99, 235, 0.5);
+}
+
+/* Paragraph subtle animation */
+.swiper-slide p {
+  font-size: 16px;
+  color: #333;
+  animation: fadeIn 1.2s ease;
+  transition: color 0.3s ease;
+}
+
+.swiper-slide p:hover {
+  color: #111;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Water Effect Button */
+.btn-water {
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(270deg, #2563eb, #60a5fa, #2563eb);
+  background-size: 600% 600%;
+  animation: waterMove 6s ease infinite;
+  transition: transform 0.3s ease;
+}
+
+/* Hover: make button pop */
+.btn-water:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for flowing gradient */
+@keyframes waterMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* 🚀 Hero Section of arpan atha */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f0f4ff, #e3e9ff);
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-text button {
+  background: #2963d6;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+  background: #2963d6;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(47, 75, 215, 0.4);
+}
+
+.hero-image img {
+  width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* 🌟 Footer Styles suri */
 footer {
   background: linear-gradient(to right, rgb(30, 10, 10), #150101);
   border-top-left-radius: 100px;
@@ -154,59 +418,12 @@ p.phone {
   margin-top: 20px;
   font-size: 14px;
 }
-
-/* 🚀 Hero Section Styles */
-.hero {
+.anim{
+  margin-left: 200px;
+  height: 500px;
+}
+.top{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 10%;
-  background: linear-gradient(135deg, #f0f4ff, #e3e9ff);
-}
-
-.hero-text {
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.hero-text button {
-  background: #2963d6;
-  color: #fff;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hero-text button:hover {
-  background: #2963d6;
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(47, 75, 215, 0.4);
-}
-
-.hero-image img {
-  width: 480px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: all 0.4s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
 /* 📱 Responsive Design */
@@ -215,11 +432,164 @@ p.phone {
     flex-direction: column;
     text-align: center;
   }
+
+}
+/* 📱 Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 1024px) {
+  #text {
+    margin: 120px 0 40px 40px;
+    max-width: 80%;
+  }
+
+  #text h1 {
+    font-size: 50px;
+  }
+
+  #text p {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
   .hero-text {
     max-width: 100%;
+  }
+
+  .hero-image img {
+    width: 380px;
+  }
+
+  .container {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-col {
+    width: 45%;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+  #NAV {
+    padding: 0 20px;
+  }
+
+  #nav-part2 {
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  #nav-part2 h4 {
+    font-size: 14px;
+    padding: 7px 15px;
+  }
+
+  #text {
+    margin: 100px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  #text h1 {
+    font-size: 40px;
+  }
+
+  #text p {
+    font-size: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .swiper-slide {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .swiper-slide h3 {
+    font-size: 18px;
+  }
+
+  .swiper-slide p {
+    font-size: 14px;
+  }
+
+  .btn-water {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .footer-col {
+    width: 100%;
     margin-bottom: 30px;
   }
-  .hero-image img {
-    width: 90%;
+
+  .footer-bottom {
+    font-size: 12px;
   }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+  #text h1 {
+    font-size: 32px;
+  }
+
+  #text p {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-image img {
+    width: 240px;
+  }
+
+  .btn-water {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+}
+
+/* Spline Animation Container */
+.spline-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio, adjust as needed */
+}
+
+.spline-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

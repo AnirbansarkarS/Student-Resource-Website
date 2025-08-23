@@ -5,21 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Resource Website</title>
 
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles/style.css">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
 <body>
+
+  <!-- Page 1 -->
+  <div id="page1">
+    <!-- Navbar -->
+    <div id="NAV">
+      <!-- Optional Logo -->
+      <!-- <img src="logo.png" alt="Logo"> -->
+      <div id="nav-part2">
+        <h4><a href="#">LOGIN</a></h4>
+        <h4><a href="#">SIGNUP</a></h4>
+      </div>
+    </div>
+    <section class="top">
+   
+    <!-- Text Section -->
+    <section id="text">
+      <h1>Welcome to Resource Page</h1>
+      <p>Your one-stop destination for notes, books, and guides.</p>
+    </section class="spline-container">
+    <!-- <iframe src='https://my.spline.design/robotfollowcursorforlandingpage-xMyYqbeUMvoEtzJpA1JVKlJA/' frameborder='0' width='150%' height='800vh'></iframe> -->
+      <iframe class="anim" src='https://my.spline.design/meeet-kSuHuPEQsW8SVP06NQmfdP9c/' frameborder='0' width='100%' height='100%'></iframe>
+</section>
+
+    <!-- cards -->
+   <section id="resources">
+  <h2 class="title">EXPLORE COURSES</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <h3>B.Tech</h3>
+        <p>Engineering syllabus, notes & previous papers.</p>
+        <button class="btn-water">Click Here</button>
+      </div>
+
+      <div class="swiper-slide">
+        <h3>BCA</h3>
+        <p>Computer applications syllabus & study material.</p>
+      <button class="btn-water">Click Here</button>
+      </div>
+
+      <div class="swiper-slide">
+        <h3>BBA</h3>
+        <p>Business administration resources & guides.</p>
+  <button class="btn-water">Click Here</button>
+      </div>
+
+      <div class="swiper-slide">
+        <h3>BHM</h3>
+        <p>Hospitality & hotel management study resources.</p>
+      <button class="btn-water">Click Here</button>
+      </div>
+
+    </div>
+
+    <!-- Swiper Controls -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-image">
-      <img src="stu.png" alt="Education AI">
+      <img src="assets/index1.jpg" alt="Education AI">
     </div>
     <div class="hero-text">
       <h1>Hello <a style="color:#2963d6;">Everyone</a></h1>
+      <h1><span id="edu-type"></span></h1>
+      <p>
+        Unlock your potential with our AI-powered educational platform. Learn new skills,
+        track your progress, and explore knowledge designed to guide your success 24/7.
+      </p>
+      <button onclick="alert('Redirecting to Courses...')">Start Learning</button>
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="assets/stu.png" alt="Education AI">
+    </div>
+    <div class="hero-text">
+      <h1><a style="color:#2963d6;">About</a></h1>
       <h1><span id="edu-type"></span></h1>
       <p>
         Unlock your potential with our AI-powered educational platform. Learn new skills,
@@ -98,6 +182,10 @@
     </div>
   </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
   <!-- Typed.js Animation -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script>
@@ -112,6 +200,8 @@
       loop: true
     });
   </script>
+
+
 
 </body>
 </html>
