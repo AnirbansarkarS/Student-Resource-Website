@@ -435,8 +435,20 @@ p.phone {
     flex-direction: column;
     text-align: center;
   }
+  .anim{
+ display: none;
+}
+.hero{
+  margin-top: 0px;
+}
+
+#page1{
+      min-height: 20vh;
+}
 
 }
+
+
 /* 📱 Responsive Design */
 
 /* Tablet Screens */
