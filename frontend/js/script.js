@@ -31,3 +31,14 @@ gsap.from("#text p", {
 });
 // login and register js
 
+// Intro animation then show auth
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        gsap.to("#introScreen", { duration: 1, opacity: 0, y: -100, onComplete: () => {
+          document.getElementById("introScreen").style.display = "none";
+          const auth = document.getElementById("authContainer");
+          auth.style.display = "block";
+          gsap.to(auth, { duration: 1, opacity: 1, y: 0, ease: "power3.out" });
+        }});
+      }, 2500);
+    });

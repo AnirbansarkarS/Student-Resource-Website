@@ -611,3 +611,51 @@ p.phone {
 }
 
 /* login and register css by chirabrata  */
+
+
+
+/* INTRO SCREEN */
+#introScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.lightStreak {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00c6ff, #0072ff, transparent);
+  transform: rotate(20deg);
+  animation: streak 2.5s linear forwards;
+}
+
+@keyframes streak {
+  0% { transform: translateX(-150%) rotate(20deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(150%) rotate(20deg); opacity: 0; }
+}
+
+.introText {
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Improved fluid typography */
+  font-weight: bold;
+  color: #00aaff;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards 1.2s;
+  text-align: center; /* Ensures text is centered on small screens */
+  padding: 0 10px;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
