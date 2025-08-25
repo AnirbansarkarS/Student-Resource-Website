@@ -1,9 +1,4 @@
-Here’s a **professional and engaging README.md** draft for your student resource website 👇
-
----
-
-# 🎓 Student Resource Hub
-
+# 🎓 PHENIX
 A centralized platform designed for students to easily access **YouTube playlists, notes, and previous year question papers (PYQs)** for each semester and subject.
 
 ---
